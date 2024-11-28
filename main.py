@@ -1,8 +1,9 @@
 import Harcmenete
 import Jatekmenet
-from Kezdoertek import Jatekos
+from Jatekos import Jatekos
 from Szerencseprobaja import jo_vagy_balszerencse
 
-labirintus=Jatekmenet.labirintus_generalasa()
-jatekos=Jatekos(6,6,6)#jatekos generalasa
-Jatekmenet.jatek(labirintus, jatekos)
+jatekos = Jatekos("Péter", 0, 0, 0)
+print(jatekos)  # Kiírjuk a kezdeti statisztikákat
+
+jatekos.kiir()

@@ -1,22 +1,20 @@
-from Kezdoertek import Jatekos
+from Jatekos import Jatekos
 import random
 
-def jo_vagy_balszerencse(ugyesseg,eletero,szerencse):
-    szerencses_sebzes=0
-    szerencses_vedekezes=0
-    balszerencses_sebzes=0
-    balszerencses_vedekezes=0
-    i:int=0
-    kocka_dob=0
-    while(i<2):
-        kocka_dob+= int(random.random()*6+1)
-        i+=1
-    if(kocka_dob<szerencse):
-        szerencse-=1
-        szerencses_sebzes=ugyesseg*2 
-        szerencses_vedekezes
-        
+def jo_vagy_balszerencse(jatekos, dobas):
+    jatekos.szerencse-=1
+    if(dobas<jatekos.szerencse):
+        valaszt:int=int(input("Ha az ellenfeled sebzésére használod a szerencséd írj be 1-et.Ha védekezésre használod, akkor írj be 2-t: "))
+
+        if(valaszt==1):
+            jatekos.ugyesseg*=2 
+
+        else:
+            jatekos.eletero=jatekos.eletero-1 #hozzá kell adnunk majd azt a pontszámot , amit a szörny ennél a támadásnűál sebzett rajtunk
     else:
-        szerencse-=1
-        balszerencses_sebzes+=1
-        balszerencses_vedekezes+=1
+        valaszt:int=int(input("Ha az ellenfeled sebzésére használod a szerencséd írj be 1-et.Ha védekezésre használod, akkor írj be 2-t: "))
+        if(valaszt==1):
+            jatekos.ugyesseg+=1
+        else:
+            jatekos.eletero=jatekos.eletero-3 #hozzá kell adnunk majd azt a pontszámot , amit a szörny ennél a támadásnűál sebzett rajtunk
+        

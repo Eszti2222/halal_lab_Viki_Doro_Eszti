@@ -1,4 +1,4 @@
-from Kezdoertekek import Jatekos
+from Kezdoertek import Jatekos
 import random
 
 def jo_vagy_balszerencse(ugyesseg,eletero,szerencse):

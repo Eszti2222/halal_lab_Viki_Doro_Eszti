@@ -1,14 +1,8 @@
-import HarcMenete
-import JatekMenete
-from Kezdoertekek import Jatekos
-from SzerencseProbaja import jo_vagy_balszerencse
-import Kezdoertekek
-from Kezdoertekek import Kezdoertekek
-import SzerencseProbaja
+import Harcmenete
+import Jatekmenet
+from Kezdoertek import Jatekos
+from Szerencseprobaja import jo_vagy_balszerencse
 
-kezdo_lista=[]
-kezdo_lista.append(Kezdoertekek("Ügyesség"), )
-
-labirintus=JatekMenete.labirintus_generalasa()
-jatekos=Kezdoertekek.Kezdoertekek(6,6,6)#jatekos generalasa
-JatekMenete.jatek(labirintus, jatekos)
+labirintus=Jatekmenet.labirintus_generalasa()
+jatekos=Jatekos(6,6,6)#jatekos generalasa
+Jatekmenet.jatek(labirintus, jatekos)
